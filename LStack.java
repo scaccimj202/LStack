@@ -52,4 +52,22 @@
          size--;
          return element;
      }
+
+     /**
+      * Method 'peeks' the top of the stack and returns the element 
+      *without pop'ing
+      *@return the top element on the stack without pop'ing
+      */
+     public E topValue(){
+        assert top != null : "Stack is empty";
+        return top.getElement();
+     }
+
+     /**
+      * Method returns the size of the stack
+      *@return the size of the stack
+      */
+     public int length(){
+         return size;
+     }
  }

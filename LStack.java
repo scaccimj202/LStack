@@ -23,4 +23,33 @@
          top = null;
          size = 0;
      }
+
+     /**
+      * Method clears the stack
+      */
+     public void clear(){
+         top = null; 
+         size = 0;
+     }
+
+     /**
+      * Method pushes element onto the stack
+      *@param element element to be pushed onto the stack
+      */
+     public void push(E element){
+         top = new Node<E>(element, top);
+         size++;
+     }
+
+     /**
+      * Method pop's the top element of the stack and returns it
+      *@return element at the top of the stack
+      */
+     public E pop(){
+         assert top != null : "Stack is empty";
+         E element = top.getElement();
+         top = top.getNext();
+         size--;
+         return element;
+     }
  }
